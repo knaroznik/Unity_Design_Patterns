@@ -1,6 +1,12 @@
 # Unity_Design_Patterns
 
-## Wzorzec most, przykładowa implementacja : 
+## To use : 
+
+1.Creational Patterns : Singleton, ObjectPool, Prototype(?)
+1.Structural Patterns : Decorator, Facade, Bridge(?)
+1.Behavioral Patterns : ???
+
+### Wzorzec most, przykładowa implementacja : 
 ```c#
  class Program
     {
