@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 6561903}
   - component: {fileID: 6561902}
   - component: {fileID: 6561901}
-  - component: {fileID: 6561900}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -132,17 +131,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6561900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 6561899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57a6f8ef59233e44a432921b167805c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &6561901
 AudioListener:
   m_ObjectHideFlags: 0
@@ -206,6 +194,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1076198402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1076198404}
+  - component: {fileID: 1076198403}
+  - component: {fileID: 1076198405}
+  m_Layer: 0
+  m_Name: '!SCRIPTS'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1076198403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076198402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57a6f8ef59233e44a432921b167805c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1076198404
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076198402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7210665, y: -0.59395134, z: -0.021484375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076198405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1076198402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979ef994c02cc4449af48068a124d834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pizzaPrefab: {fileID: 1610638441610356, guid: 9597b0b2d7c2a904ea6e9d5ea49b3aec,
+    type: 2}
+  hamPrefab: {fileID: 1562155161007058, guid: 7a44edbd6cf059d4fb16fbfdc7974495, type: 2}
 --- !u!1 &1210945240
 GameObject:
   m_ObjectHideFlags: 0

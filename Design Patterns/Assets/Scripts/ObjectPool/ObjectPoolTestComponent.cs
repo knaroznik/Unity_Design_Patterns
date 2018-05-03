@@ -53,4 +53,4 @@ public class ObjectPoolTestComponent : MonoBehaviour {
 
 }
 
-public enum ObjType{CUBE, CAPSULE, SPHERE}
+public enum ObjType{CUBE, CAPSULE, SPHERE, PIZZA, HAM}

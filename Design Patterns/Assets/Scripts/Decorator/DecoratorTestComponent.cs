@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class DecoratorTestComponent : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
+
+		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().pizzaPrefab, ObjType.PIZZA);
+		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().hamPrefab, ObjType.HAM);
+		ObjectPool.GetInstance ().InitPool ();
+
+
 		IPizza smallPizza = new SmallPizza ();
-		smallPizza = new CheeseDecorator (smallPizza);
-		DebugList (smallPizza.GetProducts ());
-		smallPizza = new CheeseDecorator (smallPizza);
-		DebugList (smallPizza.GetProducts ());
-		smallPizza = new CheeseDecorator (smallPizza);
-		DebugList (smallPizza.GetProducts ());
-
-	}
-
-	void DebugList(List<string> list){
-		string output = "";
-		for (int i = 0; i < list.Count; i++) {
-			output += list [i] + " ";
-		}
-		Debug.Log (output);
+		smallPizza.CreatePizza ();
+		smallPizza = new HamDecorator (smallPizza);
+		smallPizza.CreatePizza ();
+		smallPizza = new HamDecorator (smallPizza);
+		smallPizza.CreatePizza ();
 	}
 }

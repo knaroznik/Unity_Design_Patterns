@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PizzaDecorator : IPizza {
 
@@ -10,13 +11,22 @@ public class PizzaDecorator : IPizza {
 		_pizza = pizza;
 	}
 
-	public override List<string> GetProducts ()
+	public override void CreatePizza ()
 	{
-		return _pizza.GetProducts ();
+		ClearPizza ();
+		_pizza.CreatePizza ();
 	}
 
-	public override string GetName ()
+	public override void ClearPizza ()
 	{
-		return _pizza.GetName ();
+		for (int i = 0; i < objUsing.Count; i++) {
+			ObjectPool.GetInstance ().ReleaseReusable (objUsing.Keys.ToArray () [i], objUsing.Values.ToArray () [i]);
+		}
+		objUsing.Clear ();
+	}
+
+	public override GameObject PizzaCake ()
+	{
+		return _pizza.PizzaCake ();
 	}
 }

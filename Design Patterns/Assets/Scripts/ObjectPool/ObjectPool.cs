@@ -29,7 +29,6 @@ public class ObjectPool{
 		else
 		{
 			GameObject obj = GameObject.Instantiate (_prototypes [type]);
-			Debug.Log ("CREATING " + type.ToString ());
 			return obj;
 		}
 	}
@@ -38,6 +37,7 @@ public class ObjectPool{
 	{
 		_available [type].Add (item);
 		item.SetActive (false);
+		item.transform.SetParent (null);
 	}
 
 	public void AddPrototype(GameObject obj, ObjType type){
