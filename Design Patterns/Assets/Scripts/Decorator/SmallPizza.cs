@@ -7,6 +7,8 @@ public class SmallPizza : IPizza {
 
 	public override void CreatePizza ()
 	{
+		//RESET POZYCJI
+		Debug.Log("PIZZA");
 		ClearPizza ();
 		GameObject obj = PlaceObject (ObjType.PIZZA, Vector3.zero, null);
 		pizzaCake = obj;
@@ -25,6 +27,8 @@ public class SmallPizza : IPizza {
 	{
 		return pizzaCake;
 	}
+
+
 
 
 

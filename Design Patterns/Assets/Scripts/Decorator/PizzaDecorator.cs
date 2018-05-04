@@ -23,6 +23,7 @@ public class PizzaDecorator : IPizza {
 			ObjectPool.GetInstance ().ReleaseReusable (objUsing.Keys.ToArray () [i], objUsing.Values.ToArray () [i]);
 		}
 		objUsing.Clear ();
+
 	}
 
 	public override GameObject PizzaCake ()

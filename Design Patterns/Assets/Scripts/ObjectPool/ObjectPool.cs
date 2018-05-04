@@ -51,3 +51,5 @@ public class ObjectPool{
 
 	}
 }
+
+public enum ObjType{PIZZA, HAM, CHICKEN, MUSHROOM}

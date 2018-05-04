@@ -9,8 +9,11 @@ public class HamDecorator : PizzaDecorator {
 
 	public override void CreatePizza ()
 	{
+		
 		base.CreatePizza ();
+		Debug.Log ("HAM");
 		GameObject obj = PlaceObject (ObjType.HAM, hamPosition, PizzaCake ().transform);
+
 		objUsing.Add (obj, ObjType.HAM);
 	}
 }

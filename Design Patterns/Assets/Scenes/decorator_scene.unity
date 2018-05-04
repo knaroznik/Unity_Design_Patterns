@@ -249,6 +249,10 @@ MonoBehaviour:
   pizzaPrefab: {fileID: 1610638441610356, guid: 9597b0b2d7c2a904ea6e9d5ea49b3aec,
     type: 2}
   hamPrefab: {fileID: 1562155161007058, guid: 7a44edbd6cf059d4fb16fbfdc7974495, type: 2}
+  mushroomPrefab: {fileID: 1974135396285580, guid: f6331b91394664e4b9410e5a7e1018cf,
+    type: 2}
+  chickenPrefab: {fileID: 1675024462047340, guid: 2c1c2e6da25211b41babb9b42ead6b15,
+    type: 2}
 --- !u!1 &1210945240
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class SceneData : MonoBehaviour {
 	private static SceneData instance;
 	public GameObject pizzaPrefab;
 	public GameObject hamPrefab;
+	public GameObject mushroomPrefab;
+	public GameObject chickenPrefab;
 
 	void Awake(){
 		instance = this;

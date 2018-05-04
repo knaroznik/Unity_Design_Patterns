@@ -12,10 +12,9 @@ public abstract class IPizza : IObjectPooled {
 		return x;
 	}
 
-
-	protected Vector3 hamPosition = new Vector3 (-1.3f, 1f, -1f);
-	protected Vector3 mushroomPosition;
-	protected Vector3 chickenPosition;
+	public Vector3 hamPosition = new Vector3 (-1.3f, 1f, -1f);
+	protected Vector3 mushroomPosition = new Vector3 (1.3f, 0.5f, -1f);
+	protected Vector3 chickenPosition = new Vector3 (0f, -1f, -1f);
 
 	protected GameObject pizzaCake;
 
