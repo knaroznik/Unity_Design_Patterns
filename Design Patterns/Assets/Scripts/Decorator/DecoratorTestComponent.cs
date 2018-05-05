@@ -27,6 +27,6 @@ public class DecoratorTestComponent : MonoBehaviour {
 			}
 		}
 
-		smallPizza.CreatePizza ();
+		smallPizza.CreatePizza (Vector3.zero);
 	}
 }

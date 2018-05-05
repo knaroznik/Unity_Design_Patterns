@@ -11,10 +11,10 @@ public class PizzaDecorator : IPizza {
 		_pizza = pizza;
 	}
 
-	public override void CreatePizza ()
+	public override void CreatePizza (Vector3 pos)
 	{
 		ClearPizza ();
-		_pizza.CreatePizza ();
+		_pizza.CreatePizza (pos);
 	}
 
 	public override void ClearPizza ()

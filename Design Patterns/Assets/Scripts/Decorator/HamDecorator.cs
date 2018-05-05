@@ -7,10 +7,10 @@ public class HamDecorator : PizzaDecorator {
 	public HamDecorator(IPizza pizza) : base(pizza){
 	}
 
-	public override void CreatePizza ()
+	public override void CreatePizza (Vector3 pos)
 	{
 		
-		base.CreatePizza ();
+		base.CreatePizza (pos);
 		Debug.Log ("HAM");
 		GameObject obj = PlaceObject (ObjType.HAM, hamPosition, PizzaCake ().transform);
 

@@ -7,8 +7,8 @@ public abstract class IPizza : IObjectPooled {
 	public GameObject PlaceObject(ObjType obj, Vector3 position, Transform parent)
 	{
 		GameObject x = ObjectPool.GetInstance ().acquireReusable (obj);
-		x.transform.position = position;
 		x.transform.SetParent (parent);
+		x.transform.localPosition = position;
 		return x;
 	}
 
@@ -20,7 +20,7 @@ public abstract class IPizza : IObjectPooled {
 
 	protected Dictionary<GameObject, ObjType> objUsing = new Dictionary<GameObject, ObjType> ();
 
-	public abstract void CreatePizza ();
+	public abstract void CreatePizza (Vector3 pos);
 	public abstract void ClearPizza();
 	public abstract GameObject PizzaCake ();
 }
