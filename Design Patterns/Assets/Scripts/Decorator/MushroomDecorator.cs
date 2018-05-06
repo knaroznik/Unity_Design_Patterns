@@ -11,7 +11,6 @@ public class MushroomDecorator : PizzaDecorator {
 	{
 		
 		base.CreatePizza (pos);
-		Debug.Log("MUSHROOM");
 		GameObject obj = PlaceObject (ObjType.MUSHROOM, mushroomPosition, PizzaCake ().transform);
 		objUsing.Add (obj, ObjType.MUSHROOM);
 	}

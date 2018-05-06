@@ -11,7 +11,6 @@ public class HamDecorator : PizzaDecorator {
 	{
 		
 		base.CreatePizza (pos);
-		Debug.Log ("HAM");
 		GameObject obj = PlaceObject (ObjType.HAM, hamPosition, PizzaCake ().transform);
 
 		objUsing.Add (obj, ObjType.HAM);

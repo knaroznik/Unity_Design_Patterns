@@ -909,12 +909,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7258f73663b25f64ca0f9d41365c5a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pizzaPrefab: {fileID: 1610638441610356, guid: 9597b0b2d7c2a904ea6e9d5ea49b3aec,
+  pizzaPrefab: {fileID: 1610638441610356, guid: 61358cc7405e7aa47b769a73c3432f13,
     type: 2}
-  hamPrefab: {fileID: 1562155161007058, guid: 7a44edbd6cf059d4fb16fbfdc7974495, type: 2}
-  mushroomPrefab: {fileID: 1974135396285580, guid: f6331b91394664e4b9410e5a7e1018cf,
+  hamPrefab: {fileID: 1562155161007058, guid: 0b10ce2d3bb0b8548b00b1886b039475, type: 2}
+  mushroomPrefab: {fileID: 1974135396285580, guid: 8e9ed85089a4d214cbd5aeecbe2313bc,
     type: 2}
-  chickenPrefab: {fileID: 1675024462047340, guid: 2c1c2e6da25211b41babb9b42ead6b15,
+  chickenPrefab: {fileID: 1675024462047340, guid: 58e397328e6968149ac39860c4b3aca2,
     type: 2}
   pizzaTransforms:
   - {fileID: 515884150}
