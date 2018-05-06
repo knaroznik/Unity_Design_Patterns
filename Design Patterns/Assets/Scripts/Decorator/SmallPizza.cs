@@ -5,12 +5,13 @@ using System.Linq;
 
 public class SmallPizza : IPizza {
 
-	public override void CreatePizza (Vector3 pos)
+	public override GameObject CreatePizza (Vector3 pos)
 	{
 		ClearPizza ();
 		GameObject obj = PlaceObject (ObjType.PIZZA, pos, null);
 		pizzaCake = obj;
 		objUsing.Add (obj, ObjType.PIZZA);
+		return obj;
 	}
 
 	public override void ClearPizza ()

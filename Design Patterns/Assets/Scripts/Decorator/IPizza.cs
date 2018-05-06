@@ -20,7 +20,7 @@ public abstract class IPizza : IObjectPooled {
 
 	protected Dictionary<GameObject, ObjType> objUsing = new Dictionary<GameObject, ObjType> ();
 
-	public abstract void CreatePizza (Vector3 pos);
+	public abstract GameObject CreatePizza (Vector3 pos);
 	public abstract void ClearPizza();
 	public abstract GameObject PizzaCake ();
 }

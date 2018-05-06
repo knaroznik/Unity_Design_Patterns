@@ -23,12 +23,6 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 	}
 
 	void Start(){
-		//TO RACZEJ PRZENIEŚĆ DO AWAKE W INNEJ KLASIE?!
-		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().pizzaPrefab, ObjType.PIZZA);
-		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().hamPrefab, ObjType.HAM);
-		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().chickenPrefab, ObjType.CHICKEN);
-		ObjectPool.GetInstance ().AddPrototype (SceneData.GetInstance().mushroomPrefab, ObjType.MUSHROOM);
-		ObjectPool.GetInstance ().InitPool ();
 		pizzaTransforms = ((MainSceneData)MainSceneData.GetInstance ()).pizzaTransforms;
 
 		userInput = new UserInput ();

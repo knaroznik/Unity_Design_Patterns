@@ -7,10 +7,11 @@ public class ChickenDecorator : PizzaDecorator {
 	public ChickenDecorator(IPizza pizza) : base(pizza){
 	}
 
-	public override void CreatePizza (Vector3 pos)
+	public override GameObject CreatePizza (Vector3 pos)
 	{
-		base.CreatePizza (pos);
+		GameObject pizza = base.CreatePizza (pos);
 		GameObject obj = PlaceObject (ObjType.CHICKEN, chickenPosition, PizzaCake ().transform);
 		objUsing.Add (obj, ObjType.CHICKEN);
+		return pizza;
 	}
 }
