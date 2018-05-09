@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Client {
+public class Client : IObservator{
+
+	//Remove in next patches.
+	private GameObject objToName;
+
+	public Client(GameObject obj){
+		objToName = obj;
+	}
 
 	public void ChooseRandomPizza (Vector3 pizzaPosition, GameObject parent){
 		CreatePizza (FillTypes (), pizzaPosition, parent.transform);
 	}
 
 	private List<ObjType> FillTypes(){
-		
 		int x;
 		List<ObjType> types = new List<ObjType> ();
 
@@ -56,5 +62,10 @@ public class Client {
 		GameObject pizzaObj = pizza.CreatePizza (pizzaPosition + new Vector3(0f,0f, -2f));
 		pizzaObj.transform.SetParent (parent);
 		pizzaObj.transform.localScale = new Vector3 (0.25f, 0.25f, 0.25f);
+	}
+
+	public void SyncPizza (GameObject pizza){
+		//TUTAJ SPRAWDZIĆ CZY PIZZA OK, CZY MOŻNA WYJŚĆ ITD.
+		Debug.Log (objToName.name + " pizza");
 	}
 }

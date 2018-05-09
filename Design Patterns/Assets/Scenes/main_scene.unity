@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4831a1f1813e75d4fa216c58f72510b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 2
   pizzaTransform: {fileID: 1075618616}
 --- !u!4 &180099751
 Transform:
@@ -167,7 +168,7 @@ GameObject:
   - component: {fileID: 314528027}
   - component: {fileID: 314528028}
   m_Layer: 0
-  m_Name: bin
+  m_Name: freezer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,8 +181,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 314528026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.77, y: -0.32, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 7.75, y: 1.4, z: 0}
+  m_LocalScale: {x: 0.71571994, y: 0.7157201, z: 2.3857336}
   m_Children:
   - {fileID: 1188217475}
   m_Father: {fileID: 1203035223}
@@ -422,6 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455079370}
   - component: {fileID: 455079371}
+  - component: {fileID: 455079372}
   m_Layer: 0
   m_Name: table (2)
   m_TagString: Untagged
@@ -487,6 +489,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &455079372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455079369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976b74b192d1f04bba35d57d544291c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515884149
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515884150}
   - component: {fileID: 515884151}
+  - component: {fileID: 515884152}
   m_Layer: 0
   m_Name: table (1)
   m_TagString: Untagged
@@ -561,6 +575,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &515884152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 515884149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976b74b192d1f04bba35d57d544291c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662508838
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +893,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 832404109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 0.79, z: -1}
+  m_LocalPosition: {x: 5.17, y: 0.66, z: -1}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1203035223}
@@ -1046,6 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4831a1f1813e75d4fa216c58f72510b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 1
   pizzaTransform: {fileID: 421550109}
 --- !u!4 &1015042466
 Transform:
@@ -1114,8 +1140,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188217474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 5.87, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.8383166, y: 2.8223321, z: -0.41915828}
+  m_LocalScale: {x: 0.4191584, y: 0.41915825, z: 0.41915828}
   m_Children: []
   m_Father: {fileID: 314528027}
   m_RootOrder: 0
@@ -1294,13 +1320,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353341602}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9866076, w: 0.16311191}
   m_LocalPosition: {x: 5.22, y: -1.09, z: -2}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1203035223}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 161.225}
 --- !u!212 &1353341604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1461,6 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4831a1f1813e75d4fa216c58f72510b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
   pizzaTransform: {fileID: 950127075}
 --- !u!1 &1495187939
 GameObject:
@@ -1497,10 +1524,10 @@ MonoBehaviour:
     type: 2}
   chickenPrefab: {fileID: 1675024462047340, guid: 58e397328e6968149ac39860c4b3aca2,
     type: 2}
-  pizzaTransforms:
-  - {fileID: 515884150}
-  - {fileID: 455079370}
-  - {fileID: 1834825853}
+  pizzaComponents:
+  - {fileID: 515884152}
+  - {fileID: 455079372}
+  - {fileID: 1834825855}
   userTableTransform: {fileID: 1353341603}
 --- !u!4 &1495187941
 Transform:
@@ -1681,6 +1708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1834825853}
   - component: {fileID: 1834825854}
+  - component: {fileID: 1834825855}
   m_Layer: 0
   m_Name: table (3)
   m_TagString: Untagged
@@ -1746,6 +1774,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1834825855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1834825852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976b74b192d1f04bba35d57d544291c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855935038
 GameObject:
   m_ObjectHideFlags: 0

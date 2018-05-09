@@ -18,7 +18,7 @@ public abstract class IPizza : IObjectPooled {
 
 	protected GameObject pizzaCake;
 
-	protected Dictionary<GameObject, ObjType> objUsing = new Dictionary<GameObject, ObjType> ();
+	public Dictionary<GameObject, ObjType> objUsing = new Dictionary<GameObject, ObjType> ();
 
 	public abstract GameObject CreatePizza (Vector3 pos);
 	public abstract void ClearPizza();

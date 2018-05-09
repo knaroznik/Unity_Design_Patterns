@@ -12,7 +12,7 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 	private Vector3 pos;
 
 	private IPizza[] pizzas = new IPizza[3];
-	private List<Transform> pizzaTransforms;
+	private List<TableComponent> pizzaTransforms;
 
 	public GameObject PlaceObject (ObjType obj, Vector3 position, Transform parent)
 	{
@@ -23,7 +23,7 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 	}
 
 	void Start(){
-		pizzaTransforms = ((MainSceneData)MainSceneData.GetInstance ()).pizzaTransforms;
+		pizzaTransforms = ((MainSceneData)MainSceneData.GetInstance ()).pizzaComponents;
 
 		userInput = new UserInput ();
 		pos = ((MainSceneData)MainSceneData.GetInstance ()).userTableTransform.position + new Vector3 (0f, 0f, -5f);
@@ -57,7 +57,8 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 					if (kcode.ToString () == "Alpha1" || kcode.ToString () == "Alpha2" || kcode.ToString () == "Alpha3") {
 						int pizzaNumber = keyCodeToInt(kcode.ToString());
 						if (XD (pizzaNumber)) {
-							pizzas [pizzaNumber].CreatePizza (pizzaTransforms [pizzaNumber].position + new Vector3(0f,0f,-5f));
+							pizzaTransforms [pizzaNumber].pizzaValue = pizzas [pizzaNumber].CreatePizza (pizzaTransforms [pizzaNumber].gameObject.transform.position + new Vector3(0f,0f,-5f));
+							pizzaTransforms [pizzaNumber].SyncData ();
 							ObjectPool.GetInstance ().ReleaseReusable (currObj, type);
 							currObj = null;
 						}
