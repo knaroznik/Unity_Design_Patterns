@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class PizzaDecorator : IPizza {
+public class PizzaDecorator : Pizza {
 
-	protected IPizza _pizza;
+	protected Pizza _pizza;
 
-	public PizzaDecorator(IPizza pizza){
+	public PizzaDecorator(Pizza pizza){
 		_pizza = pizza;
 	}
 
@@ -19,11 +19,8 @@ public class PizzaDecorator : IPizza {
 
 	public override void ClearPizza ()
 	{
-		for (int i = 0; i < objUsing.Count; i++) {
-			ObjectPool.GetInstance ().ReleaseReusable (objUsing.Keys.ToArray () [i], objUsing.Values.ToArray () [i]);
-		}
-		objUsing.Clear ();
-
+		if(class_object != null)
+			ObjectPool.GetInstance ().ReleaseReusable (class_object, class_type);
 	}
 
 	public override GameObject PizzaCake ()

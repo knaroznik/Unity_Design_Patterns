@@ -16,6 +16,7 @@ public class ObjectPool{
 		}
 		return instance;
 	}
+
 	public GameObject acquireReusable(ObjType type)
 	{
 		List<GameObject> reusables = _available [type];

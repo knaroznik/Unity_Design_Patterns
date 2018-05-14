@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class SmallPizza : IPizza {
+public class SmallPizza : Pizza {
 
 	public override GameObject CreatePizza (Vector3 pos)
 	{
 		ClearPizza ();
 		GameObject obj = PlaceObject (ObjType.PIZZA, pos, null);
 		pizzaCake = obj;
-		objUsing.Add (obj, ObjType.PIZZA);
+		class_object = obj;
+		class_type = ObjType.PIZZA;
 		return obj;
 	}
 
 	public override void ClearPizza ()
 	{
-		for (int i = 0; i < objUsing.Count; i++) {
-			ObjectPool.GetInstance ().ReleaseReusable (objUsing.Keys.ToArray () [i], objUsing.Values.ToArray () [i]);
-		}
-		objUsing.Clear ();
+		if(class_object != null)
+			ObjectPool.GetInstance ().ReleaseReusable (class_object, class_type);
 	}
 
 	public override GameObject PizzaCake ()

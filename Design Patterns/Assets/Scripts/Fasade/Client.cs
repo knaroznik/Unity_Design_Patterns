@@ -46,7 +46,7 @@ public class Client : IObservator{
 	}
 
 	private void CreatePizza(List<ObjType> types, Vector3 pizzaPosition, Transform parent){
-		IPizza pizza = new SmallPizza ();
+		Pizza pizza = new SmallPizza ();
 		for (int i = 0; i < types.Count; i++) {
 			if (types [i] == ObjType.CHICKEN) {
 				pizza = new ChickenDecorator (pizza);
@@ -86,12 +86,12 @@ public class Client : IObservator{
 				return;
 			}
 		}
-		((MainSceneData)MainSceneData.GetInstance ()).pizzaComponents [x].DeleteObservator (this);
+		MainSceneData.GetInstance ().pizzaComponents [x].DeleteObservator (this);
 		GameObject.Destroy (pizza);
 
 		//SETTING NULL ON UserInputComponent
 
-		GameObject.FindObjectOfType<UserInputComponent> ().pizzas [x] = null;
+		GameObject.FindObjectOfType<UserInputComponent> ().SetPizza (x, null);
 
 		command.GoOff ();
 	}

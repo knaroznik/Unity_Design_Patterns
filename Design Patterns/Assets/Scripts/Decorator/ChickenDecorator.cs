@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ChickenDecorator : PizzaDecorator {
 
-	public ChickenDecorator(IPizza pizza) : base(pizza){
+	public ChickenDecorator(Pizza pizza) : base(pizza){
 	}
 
 	public override GameObject CreatePizza (Vector3 pos)
 	{
+		//Create class object
 		GameObject pizza = base.CreatePizza (pos);
+		//Instantiate class object
 		GameObject obj = PlaceObject (ObjType.CHICKEN, chickenPosition, PizzaCake ().transform);
+		//Save informations : 
 		obj.name = "CHICKEN";
-		objUsing.Add (obj, ObjType.CHICKEN);
+		class_object = obj;
+		class_type = ObjType.CHICKEN;
+
 		return pizza;
 	}
 }
