@@ -11,6 +11,7 @@ public class ChickenDecorator : PizzaDecorator {
 	{
 		GameObject pizza = base.CreatePizza (pos);
 		GameObject obj = PlaceObject (ObjType.CHICKEN, chickenPosition, PizzaCake ().transform);
+		obj.name = "CHICKEN";
 		objUsing.Add (obj, ObjType.CHICKEN);
 		return pizza;
 	}

@@ -11,7 +11,7 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 	private ObjType type = ObjType.PIZZA;
 	private Vector3 pos;
 
-	private IPizza[] pizzas = new IPizza[3];
+	public IPizza[] pizzas = new IPizza[3];
 	private List<TableComponent> pizzaTransforms;
 
 	public GameObject PlaceObject (ObjType obj, Vector3 position, Transform parent)
@@ -65,8 +65,6 @@ public class UserInputComponent : MonoBehaviour, IObjectPooled {
 					} else if (kcode.ToString () == "Alpha4") {
 						ObjectPool.GetInstance ().ReleaseReusable (currObj, type);
 						currObj = null;
-					} else {
-						Debug.Log ("KeyCode down: " + kcode.ToString ());
 					}
 				}
 			}

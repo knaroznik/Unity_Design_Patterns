@@ -5,14 +5,11 @@ using UnityEngine;
 public class ClientComponent : MonoBehaviour {
 
 	private Client client;
-	//Temporary, change after generating clients
-	public int number;
-
 	public Transform pizzaTransform;
 
-	void Start () {
-		client =  new Client(this.gameObject);
+	public void Init (int x, ICommand _command) {
+		client =  new Client(_command, x);
 		client.ChooseRandomPizza (pizzaTransform.position, this.gameObject);
-		((MainSceneData)MainSceneData.GetInstance ()).pizzaComponents [number].AddObservator (client);
+		((MainSceneData)MainSceneData.GetInstance ()).pizzaComponents [x].AddObservator (client);
 	}
 }

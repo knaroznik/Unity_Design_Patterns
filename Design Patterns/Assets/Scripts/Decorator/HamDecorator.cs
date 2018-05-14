@@ -12,7 +12,7 @@ public class HamDecorator : PizzaDecorator {
 		
 		GameObject pizza = base.CreatePizza (pos);
 		GameObject obj = PlaceObject (ObjType.HAM, hamPosition, PizzaCake ().transform);
-
+		obj.name = "HAM";
 		objUsing.Add (obj, ObjType.HAM);
 		return pizza;
 	}

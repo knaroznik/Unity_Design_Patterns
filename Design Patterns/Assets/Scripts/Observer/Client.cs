@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Client : IObservator{
 
-	//Remove in next patches.
-	private GameObject objToName;
+	private ICommand command;
+	private List<ObjType> wantedTypes;
+	private int x;
 
-	public Client(GameObject obj){
-		objToName = obj;
+	public Client(ICommand _command, int _x){
+		command = _command;
+		x = _x;
 	}
 
 	public void ChooseRandomPizza (Vector3 pizzaPosition, GameObject parent){
@@ -39,7 +41,7 @@ public class Client : IObservator{
 				}
 			}
 		}
-
+		wantedTypes = types;
 		return types;
 	}
 
@@ -65,7 +67,32 @@ public class Client : IObservator{
 	}
 
 	public void SyncPizza (GameObject pizza){
-		//TUTAJ SPRAWDZIĆ CZY PIZZA OK, CZY MOŻNA WYJŚĆ ITD.
-		Debug.Log (objToName.name + " pizza");
+		List<string> names = new List<string> ();
+
+		for (int i = 0; i < pizza.transform.childCount; i++) {
+			names.Add (pizza.transform.GetChild (i).name);
+		}
+
+		foreach (ObjType type in wantedTypes) {
+			if (type == ObjType.CHICKEN && !names.Contains ("CHICKEN")) {
+				return;
+			}
+
+			if (type == ObjType.HAM && !names.Contains ("HAM")) {
+				return;
+			}
+
+			if (type == ObjType.MUSHROOM && !names.Contains ("MUSHROOM")) {
+				return;
+			}
+		}
+		((MainSceneData)MainSceneData.GetInstance ()).pizzaComponents [x].DeleteObservator (this);
+		GameObject.Destroy (pizza);
+
+		//SETTING NULL ON UserInputComponent
+
+		GameObject.FindObjectOfType<UserInputComponent> ().pizzas [x] = null;
+
+		command.GoOff ();
 	}
 }

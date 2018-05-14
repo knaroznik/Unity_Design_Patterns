@@ -26,9 +26,4 @@ public class SmallPizza : IPizza {
 	{
 		return pizzaCake;
 	}
-
-
-
-
-
 }

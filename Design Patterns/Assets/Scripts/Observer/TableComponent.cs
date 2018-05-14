@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TableComponent : MonoBehaviour, IObservable {
 
@@ -16,7 +17,7 @@ public class TableComponent : MonoBehaviour, IObservable {
 	}
 
 	public void SyncData(){
-		foreach(IObservator o in observatorList){
+		foreach(IObservator o in observatorList.ToList()){
 			o.SyncPizza (pizzaValue);
 		}
 	}
